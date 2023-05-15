@@ -1,0 +1,121 @@
+{
+    "categories": [
+        {
+            "name": "Favorites",
+            "questions": [
+                "What's your favorite TV show?",
+                "What's your favorite book?",
+                "What's your favorite song?",
+                "What's your favorite food?",
+                "What's your favorite hobby?",
+                "What's your favorite anime?",
+                "What's your favorite movie?"
+            ]
+        },
+        {
+            "name": "Travel",
+            "questions": [
+                "Where is the coolest place you've traveled?",
+                "Where is one place you want to visit?",
+                "Have you ever traveled solo?",
+                "Do you prefer mountains or beach?",
+                "What's the longest road trip you've been on?"
+            ]
+        },
+        {
+            "name": "Work",
+            "questions": [
+                "What's your dream job?",
+                "What's the best work advice you've received?",
+                "What's the best project you've ever worked on?",
+                "What's the most challenging task you've completed at work?",
+                "What's the best perk of your current job?"
+            ]
+        },
+        {
+            "name": "Personal",
+            "questions": [
+                "What's your biggest fear?",
+                "What's your biggest accomplishment?",
+                "What's your favorite childhood memory?",
+                "What's your favorite holiday and why?",
+                "What's something you're looking forward to?"
+            ]
+        },
+        {
+            "name": "Education",
+            "questions": [
+                "What did you study in college?",
+                "What's one thing you wish you learned in school?",
+                "What's the most interesting fact you learned in school?",
+                "What's the most useless thing you learned in school?",
+                "What's the best teacher you ever had?"
+            ]
+        },
+        {
+            "name": "Entertainment",
+            "questions": [
+                "What's the best movie you've seen recently?",
+                "What's the best concert you've been to?",
+                "What's the last book you read?",
+                "What's your favorite podcast?",
+                "What's your favorite social media platform?"
+            ]
+        },
+        {
+            "name": "Food",
+            "questions": [
+                "What's your favorite type of cuisine?",
+                "What's the best restaurant you've ever been to?",
+                "What's the best meal you've ever had?",
+                "What's something you've always wanted to try cooking?",
+                "What's your favorite dessert?"
+            ]
+        },
+        {
+            "name": "Holidays",
+            "questions": [
+                "What's your favorite holiday tradition?",
+                "What's your favorite holiday food?",
+                "What's the best gift you've ever given?",
+                "What's the best gift you've ever received?",
+                "What's the worst gift you've ever received?"
+            ]
+        },
+        {
+            "name": "Sports",
+            "questions": [
+                "What's your favorite sport to play?",
+                "What's your favorite sport to watch?",
+                "What's the best sporting event you've ever attended?",
+                "What's your favorite team?",
+                "What's your favorite athlete?"
+            ]
+        },
+        {
+            "name": "Technology",
+            "questions": [
+                "What's your favorite gadget?",
+                "What's the most useful app on your phone?",
+                "What's the coolest thing you've ever done with technology?",
+                "What's your favorite video game?",
+                "What's your favorite YouTube channel?"
+            ]
+        },
+        {
+            "name": "Other",
+            "questions": [
+                "If you could have dinner with any historical figure, who would it be and why?",
+                "What's the most beautiful place you've ever been to?",
+                "What's your favorite type of cuisine?",
+                "What's a personal accomplishment you're proud of?",
+                "Do you have any pets? If so, what kind and what are their names?",
+                "What's one thing you can't live without?",
+                "Do you prefer the city or the countryside? Why?",
+                "What's the craziest thing you've ever done?",
+                "What's your favorite thing to do on a lazy day?",
+                "What's one thing people might be surprised to learn about you?"
+            ]
+        }        
+    ]
+}
