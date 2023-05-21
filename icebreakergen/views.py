@@ -5,6 +5,7 @@ from .models import IceBreakerQuestion, Category
 from .serializers import IceBreakerQuestionSerializer, CategorySerializer
 from .icebreaker import get_random_question
 import json
+import random
 
 class CreateIceBreakerQuestionView(viewsets.ModelViewSet):
     queryset = IceBreakerQuestion.objects.all()
@@ -14,31 +15,46 @@ class CreateIceBreakerQuestionView(viewsets.ModelViewSet):
         serializer.save(created_by=self.request.user)
 
 class RandomIceBreakerQuestionView(viewsets.ViewSet):
-    queryset = IceBreakerQuestion.objects.all()
     serializer_class = IceBreakerQuestionSerializer
 
     def retrieve(self, request, pk=None):
-        # Get a random question
         question_data = get_random_question()
         category = question_data['category']
         question_text = question_data['question']
 
-        # Create the IceBreakerQuestion object
         category_instance, _ = Category.objects.get_or_create(name=category)
         question_instance = IceBreakerQuestion.objects.create(
-            question_text=question_text,
-            category=category_instance,
+            question=question_text,
             created_by=request.user
         )
+        question_instance.category.set([category_instance])
 
-        serializer = self.serializer_class(question_instance)
-        return Response(serializer.data)
+        response_data = {
+            'question': question_text,
+            'category': category  # Include the category name directly
+        }
+        return Response(response_data)
 
     def list(self, request):
-        # Get a list of all questions
-        questions = self.queryset
-        serializer = self.serializer_class(questions, many=True)
-        return Response(serializer.data)
+        questions = []
+        count = int(request.query_params.get('count', 5))
+        for _ in range(count):
+            question_data = get_random_question()
+            category = question_data['category']
+            question_text = question_data['question']
+
+            category_instance, _ = Category.objects.get_or_create(name=category)
+            question_instance = IceBreakerQuestion.objects.create(
+                question=question_text,
+                created_by=request.user
+            )
+            question_instance.category.set([category_instance])
+            questions.append({
+                'question': question_text,
+                'category': category  # Include the category name directly
+            })
+
+        return Response(questions)
     
 class CategoryViewSet(viewsets.ViewSet):
     queryset = Category.objects.all()

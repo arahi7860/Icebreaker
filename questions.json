@@ -9,7 +9,10 @@
                 "What's your favorite food?",
                 "What's your favorite hobby?",
                 "What's your favorite anime?",
-                "What's your favorite movie?"
+                "What's your favorite movie?",
+                "What's your favorite color?",
+                "What's your favorite season?",
+                "What's your favorite animal?"
             ]
         },
         {
@@ -19,7 +22,12 @@
                 "Where is one place you want to visit?",
                 "Have you ever traveled solo?",
                 "Do you prefer mountains or beach?",
-                "What's the longest road trip you've been on?"
+                "What's the longest road trip you've been on?",
+                "What's your most memorable travel experience?",
+                "What's the strangest food you've tried while traveling?",
+                "What's the next destination on your travel bucket list?",
+                "Do you collect souvenirs when you travel?",
+                "What's your favorite mode of transportation for traveling?"
             ]
         },
         {
@@ -29,7 +37,12 @@
                 "What's the best work advice you've received?",
                 "What's the best project you've ever worked on?",
                 "What's the most challenging task you've completed at work?",
-                "What's the best perk of your current job?"
+                "What's the best perk of your current job?",
+                "What's your favorite work-related accomplishment?",
+                "What's your preferred work environment: office or remote?",
+                "Do you enjoy collaborating with others or working independently?",
+                "What's your favorite productivity tool or app?",
+                "What's the biggest career change you've made?"
             ]
         },
         {
@@ -39,7 +52,12 @@
                 "What's your biggest accomplishment?",
                 "What's your favorite childhood memory?",
                 "What's your favorite holiday and why?",
-                "What's something you're looking forward to?"
+                "What's something you're looking forward to?",
+                "What's a hidden talent or skill you have?",
+                "What's your go-to relaxation technique?",
+                "Do you have any unique or unusual hobbies?",
+                "What's your favorite way to practice self-care?",
+                "What's your most prized possession?"
             ]
         },
         {
@@ -49,7 +67,12 @@
                 "What's one thing you wish you learned in school?",
                 "What's the most interesting fact you learned in school?",
                 "What's the most useless thing you learned in school?",
-                "What's the best teacher you ever had?"
+                "What's the best teacher you ever had?",
+                "What's your preferred learning style: visual, auditory, or kinesthetic?",
+                "Did you enjoy studying a specific subject in school? Which one and why?",
+                "Have you ever taken any online courses or attended workshops to learn something new?",
+                "What's your favorite educational website or app?",
+                "What's your favorite book from your school days?"
             ]
         },
         {
@@ -59,7 +82,12 @@
                 "What's the best concert you've been to?",
                 "What's the last book you read?",
                 "What's your favorite podcast?",
-                "What's your favorite social media platform?"
+                "What's your favorite social media platform?",
+                "Who is your all-time favorite actor or actress?",
+                "What's the most memorable live performance you've attended?",
+                "Do you have any favorite TV series that you binge-watch?",
+                "What's your favorite genre of music?",
+                "What's your favorite genre of books?"
             ]
         },
         {
@@ -69,7 +97,12 @@
                 "What's the best restaurant you've ever been to?",
                 "What's the best meal you've ever had?",
                 "What's something you've always wanted to try cooking?",
-                "What's your favorite dessert?"
+                "What's your favorite dessert?",
+                "Do you enjoy cooking? If so, what's your signature dish?",
+                "Have you ever tried any exotic or unusual foods?",
+                "What's your go-to comfort food?",
+                "What's your favorite drink?",
+                "Do you have any dietary restrictions or food allergies?"
             ]
         },
         {
@@ -79,7 +112,12 @@
                 "What's your favorite holiday food?",
                 "What's the best gift you've ever given?",
                 "What's the best gift you've ever received?",
-                "What's the worst gift you've ever received?"
+                "What's the worst gift you've ever received?",
+                "Do you have any unique or unconventional holiday traditions?",
+                "Do you prefer spending holidays with family or friends?",
+                "What's your favorite holiday decoration?",
+                "Do you have a favorite holiday movie or song?",
+                "Have you ever celebrated any holidays from different cultures or religions?"
             ]
         },
         {
@@ -89,7 +127,12 @@
                 "What's your favorite sport to watch?",
                 "What's the best sporting event you've ever attended?",
                 "What's your favorite team?",
-                "What's your favorite athlete?"
+                "What's your favorite athlete?",
+                "Do you have any favorite sports memories from your own experiences?",
+                "Have you ever played any organized sports?",
+                "What's your opinion on sportsmanship?",
+                "What's the most exciting sports moment you've witnessed?",
+                "Do you follow any sports leagues or tournaments regularly?"
             ]
         },
         {
@@ -99,7 +142,12 @@
                 "What's the most useful app on your phone?",
                 "What's the coolest thing you've ever done with technology?",
                 "What's your favorite video game?",
-                "What's your favorite YouTube channel?"
+                "What's your favorite YouTube channel?",
+                "Do you prefer iOS or Android?",
+                "Have you ever built a computer or tinkered with hardware?",
+                "What's the most innovative tech product you've come across?",
+                "What emerging technology are you most excited about?",
+                "Do you have any programming or coding experience?"
             ]
         },
         {
@@ -114,8 +162,18 @@
                 "Do you prefer the city or the countryside? Why?",
                 "What's the craziest thing you've ever done?",
                 "What's your favorite thing to do on a lazy day?",
-                "What's one thing people might be surprised to learn about you?"
+                "What's one thing people might be surprised to learn about you?",
+                "What's your favorite form of exercise?",
+                "What's the most adventurous activity you've ever tried?",
+                "Do you have any hidden talents?",
+                "What's your favorite type of art (e.g., painting, sculpture, photography)?",
+                "What's the best piece of advice you've ever received?",
+                "What's the most spontaneous trip or activity you've ever embarked on?",
+                "What's your favorite way to unwind after a long day?",
+                "Do you have a favorite quote or motto that inspires you?",
+                "What's the most interesting conversation you've ever had?",
+                "What's your favorite board game or card game?"
             ]
-        }        
+        }
     ]
 }
