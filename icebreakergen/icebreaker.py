@@ -43,4 +43,5 @@ def get_random_question():
         'question': random_question
     }
 
-print(get_random_question())
+# This prints out the random question
+# print(get_random_question())
