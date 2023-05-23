@@ -34,5 +34,6 @@ router.register('categories', CategoryViewSet, basename='category')
 # Define your URL patterns
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('questions/create/clear/', CreateIceBreakerQuestionView.as_view({'post': 'clear_questions'}), name='question-clear'),
     path('', include(router.urls)),
 ]  # <-- Add a closing square bracket here
