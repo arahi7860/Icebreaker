@@ -57,7 +57,19 @@
                 "What's your go-to relaxation technique?",
                 "Do you have any unique or unusual hobbies?",
                 "What's your favorite way to practice self-care?",
-                "What's your most prized possession?"
+                "What's your most prized possession?",
+                "What's your favorite type of weather?",
+                "What's your favorite type of weather?",
+                "What weather do you prefer?",
+                "What weather do you prefer?",
+                "What weather do you prefer?",
+                "What weather do you prefer?",
+                "What weather do you prefer?",
+                "What weather do you prefer?",
+                "What weather do you prefer?",
+                "What weather do you prefer?",
+                "Who do you feel inspired you to do more",
+                "Who do you feel inspired you to do more?"
             ]
         },
         {
@@ -132,7 +144,10 @@
                 "Have you ever played any organized sports?",
                 "What's your opinion on sportsmanship?",
                 "What's the most exciting sports moment you've witnessed?",
-                "Do you follow any sports leagues or tournaments regularly?"
+                "Do you follow any sports leagues or tournaments regularly?",
+                "What is your favorite sport?",
+                "Have you ever played any organized sports?",
+                "Have you ever played any sports competitively?"
             ]
         },
         {
@@ -172,7 +187,8 @@
                 "What's your favorite way to unwind after a long day?",
                 "Do you have a favorite quote or motto that inspires you?",
                 "What's the most interesting conversation you've ever had?",
-                "What's your favorite board game or card game?"
+                "What's your favorite board game or card game?",
+                "What's a book that has had a significant impact on your life?"
             ]
         }
     ]

@@ -1,0 +1,13 @@
+<form method="POST" action="/questions/create/">
+    <input type="text" name="question_text" placeholder="Enter the question">
+    
+    <select name="category">
+        <option value="" selected disabled>Select a category</option>
+        <option value="Favorites">Favorites</option>
+        <option value="Movies">Movies</option>
+        <option value="Books">Books</option>
+        <!-- Add more options for other categories -->
+    </select>
+
+    <button type="submit">Create</button>
+</form>
