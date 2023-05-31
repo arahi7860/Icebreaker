@@ -1,7 +1,15 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
 from django.db import models
 from django.db.models import Q
+from rest_framework.permissions import IsAuthenticated
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
+    name = models.CharField(max_length=255)
+    bio = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.name
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -30,3 +38,4 @@ class IceBreakerQuestion(models.Model):
 
     def __str__(self):
         return self.question
+

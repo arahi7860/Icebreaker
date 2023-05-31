@@ -1,13 +1,18 @@
 from rest_framework import generics, permissions, status, viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.response import Response
-from .models import IceBreakerQuestion, Category
-from .serializers import IceBreakerQuestionSerializer, CategorySerializer
+from rest_framework.permissions import IsAuthenticated
+from .models import IceBreakerQuestion, Category, Profile
+from .serializers import IceBreakerQuestionSerializer, CategorySerializer, UserSerializer, ProfileSerializer
 from .icebreaker import get_random_question
 import json
 import random
 from django.http import JsonResponse
 from django.contrib.auth.models import User
+from rest_framework.authtoken.models import Token
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.authtoken.views import ObtainAuthToken
+
 
 class CreateIceBreakerQuestionView(viewsets.ModelViewSet):
     queryset = IceBreakerQuestion.objects.all()
@@ -140,3 +145,58 @@ class CategoryViewSet(viewsets.ViewSet):
             return Response(category)
         else:
             return Response(status=status.HTTP_404_NOT_FOUND)
+        
+class UserCreateView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.save()
+
+        # Generate and set authentication token for the user
+        token = generate_auth_token(user)  # Implement your own token generation logic
+        user.profile.auth_token = token
+        user.profile.save()
+
+        return Response(
+            {
+                'token': token,
+                'username': user.username,
+                'email': user.email
+            },
+            status=status.HTTP_201_CREATED
+        )
+    
+class ProfileListCreateView(generics.ListCreateAPIView):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+    permission_classes = [IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset().filter(user=request.user))
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
+
+class ProfileDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+    permission_classes = [IsAuthenticated]
+
+    def delete(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    
+class CustomAuthToken(ObtainAuthToken):
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data,
+                                           context={'request': request})
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data['user']
+        token, created = Token.objects.get_or_create(user=user)
+        return Response({'id': user.id, 'username': user.username, 'token': token.key}, status=status.HTTP_200_OK)
