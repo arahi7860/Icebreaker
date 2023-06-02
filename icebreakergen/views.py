@@ -146,6 +146,10 @@ class CategoryViewSet(viewsets.ViewSet):
         else:
             return Response(status=status.HTTP_404_NOT_FOUND)
         
+def generate_auth_token(user):
+    token, created = Token.objects.get_or_create(user=user)
+    return token.key
+    
 class UserCreateView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
@@ -156,13 +160,16 @@ class UserCreateView(generics.CreateAPIView):
         user = serializer.save()
 
         # Generate and set authentication token for the user
-        token = generate_auth_token(user)  # Implement your own token generation logic
-        user.profile.auth_token = token
-        user.profile.save()
+        token, created = Token.objects.get_or_create(user=user)
+
+        # Create or update the profile
+        profile, created = Profile.objects.get_or_create(user=user)
+        profile.auth_token = token.key
+        profile.save()
 
         return Response(
             {
-                'token': token,
+                'token': token.key,
                 'username': user.username,
                 'email': user.email
             },

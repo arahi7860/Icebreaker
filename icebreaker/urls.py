@@ -20,7 +20,11 @@ from rest_framework import routers
 from icebreakergen.views import (
     CreateIceBreakerQuestionView,
     RandomIceBreakerQuestionView,
-    CategoryViewSet
+    CategoryViewSet,
+    UserCreateView,
+    ProfileDetailView,
+    ProfileListCreateView,
+    CustomAuthToken
 )
 
 # Create a router instance
@@ -35,5 +39,9 @@ router.register('categories', CategoryViewSet, basename='category')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('questions/create/clear/', CreateIceBreakerQuestionView.as_view({'post': 'clear_questions'}), name='question-clear'),
+    path('api/token/', CustomAuthToken.as_view(), name='api-token-auth'),  # Add this line for authentication token endpoint
+    path('api/register/', UserCreateView.as_view(), name='api-register'),  # Add this line for user creation endpoint
+    path('api/profiles/', ProfileListCreateView.as_view(), name='api-profiles'),  # Optional: Add this line for profiles list and creation endpoint
+    path('api/profiles/<int:pk>/', ProfileDetailView.as_view(), name='api-profile-detail'),  # Optional: Add this line for profile detail, update, and delete endpoint
     path('', include(router.urls)),
-]  # <-- Add a closing square bracket here
+]
